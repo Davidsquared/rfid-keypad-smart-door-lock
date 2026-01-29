@@ -34,13 +34,26 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 MFRC522 rfid(SS_PIN, RST_PIN);
 Servo doorServo;
 
+/*
+---------------------- Keypad Configuration ----------------------
+NOTE:
+A 4x4 matrix keypad was used physically, but only a 2x2 section
+is implemented in software. This was a deliberate design choice
+due to the limited number of available GPIO pins on the Arduino Uno
+after integrating the RFID module (SPI), LCD, servo motor, and
+control buttons.
+
+The keypad logic can be easily expanded back to a full 4x4 matrix
+on boards with more I/O pins or by using an I/O expander.
+*/
+
 // ---------------------- Keypad (2x2) ----------------------
 constexpr byte ROWS = 2;
 constexpr byte COLS = 2;
 
 char keys[ROWS][COLS] = {
   {'1','2'},
-  {'3','4'}
+  {'4','5'}
 };
 
 byte rowPins[ROWS] = {A0, A1};
@@ -64,7 +77,7 @@ constexpr unsigned long BUTTON_DEBOUNCE_MS  = 200;
 constexpr uint8_t PIN_LENGTH = 2;
 
 // Use fixed-size arrays so it looks deliberate and avoids dynamic allocation.
-const char* AUTH_PINS[] = {"12", "34"};
+const char* AUTH_PINS[] = {"12", "45"};
 constexpr size_t AUTH_PINS_COUNT = sizeof(AUTH_PINS) / sizeof(AUTH_PINS[0]);
 
 // Store RFID UIDs in uppercase hex with no spaces (example: "F1061B06")
