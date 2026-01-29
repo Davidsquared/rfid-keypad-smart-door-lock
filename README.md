@@ -111,11 +111,14 @@ This design choice is clearly reflected in the keypad configuration and scanning
 
 ---
 
-## 📸 Demo & Media
+## 📸 Images
 
-<img width="975" height="731" alt="image" src="https://github.com/user-attachments/assets/ee63a066-88ca-4a24-bf1f-17a531650c4b" />
-<img width="975" height="1301" alt="image" src="https://github.com/user-attachments/assets/6296d8ad-026d-4380-beff-665e98f8fddf" />
+### Wiring & Hardware Layout
 
+The breadboard wiring and schematic diagrams were created using Fritzing.
+Only a subset of the 4×4 keypad is connected due to Arduino Uno GPIO
+constraints. This is a deliberate design choice reflected consistently
+across the wiring, schematic, and software implementation.
 
 ---
 
