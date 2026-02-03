@@ -210,6 +210,6 @@ The project serves as a strong example of embedded system design, combining hard
 
 ## APPENDIX
 
-* GitHub Repository: *(insert link)*
+* GitHub Repository: (https://github.com/Davidsquared/rfid-keypad-smart-door-lock)
 * Wiring Diagrams (Fritzing)
 * Source Code (Blocking & Non-Blocking)
